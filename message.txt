@@ -1,0 +1,610 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 57 | Scripts: 3 | Modules: 0
+local G2L = {};
+
+-- StarterGui.Library
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Enabled"] = false;
+G2L["1"]["Name"] = [[Library]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.Library.Screen
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["ZIndex"] = 0;
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[Screen]];
+G2L["2"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.Library.Screen.Drag
+G2L["3"] = Instance.new("Frame", G2L["2"]);
+G2L["3"]["ZIndex"] = 100;
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3"]["Selectable"] = true;
+G2L["3"]["Size"] = UDim2.new(0.556, 0, 0.04, 0);
+G2L["3"]["Position"] = UDim2.new(0.25, 0, 0.1, 0);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Name"] = [[Drag]];
+G2L["3"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.Library.Screen.Drag.Main4
+G2L["4"] = Instance.new("Frame", G2L["3"]);
+G2L["4"]["ZIndex"] = 99;
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(45, 45, 45);
+G2L["4"]["Size"] = UDim2.new(0, 564, 0, 651);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(14, 70, 73);
+G2L["4"]["Name"] = [[Main4]];
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3
+G2L["5"] = Instance.new("Frame", G2L["4"]);
+G2L["5"]["ZIndex"] = 98;
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["5"]["Size"] = UDim2.new(1, -4, 1, -4);
+G2L["5"]["Position"] = UDim2.new(0, 2, 0, 2);
+G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["Name"] = [[Main3]];
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2
+G2L["6"] = Instance.new("Frame", G2L["5"]);
+G2L["6"]["ZIndex"] = 97;
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(45, 45, 45);
+G2L["6"]["Size"] = UDim2.new(1, -4, 1, -4);
+G2L["6"]["Position"] = UDim2.new(0, 2, 0, 2);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Name"] = [[Main2]];
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main
+G2L["7"] = Instance.new("Frame", G2L["6"]);
+G2L["7"]["ZIndex"] = 96;
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(56, 56, 56);
+G2L["7"]["Size"] = UDim2.new(1, -14, 1, -34);
+G2L["7"]["Position"] = UDim2.new(0, 7, 0, 26);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Name"] = [[Main]];
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.UICorner
+G2L["8"] = Instance.new("UICorner", G2L["7"]);
+G2L["8"]["CornerRadius"] = UDim.new(0, 3);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers
+G2L["9"] = Instance.new("Frame", G2L["7"]);
+G2L["9"]["ZIndex"] = 95;
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["9"]["Size"] = UDim2.new(1, -2, 1, -2);
+G2L["9"]["Position"] = UDim2.new(0, 1, 0, 1);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Name"] = [[Tabs And Containers]];
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.UICorner
+G2L["a"] = Instance.new("UICorner", G2L["9"]);
+G2L["a"]["CornerRadius"] = UDim.new(0, 3);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Tabs
+G2L["b"] = Instance.new("Frame", G2L["9"]);
+G2L["b"]["ZIndex"] = 94;
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["Size"] = UDim2.new(1, -20, 1, -20);
+G2L["b"]["Position"] = UDim2.new(0, 10, 0, 10);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Name"] = [[Tabs]];
+G2L["b"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Tabs.LocalScript
+G2L["c"] = Instance.new("LocalScript", G2L["b"]);
+
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Tabs.Selected
+G2L["d"] = Instance.new("TextButton", G2L["b"]);
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["TextSize"] = 14;
+G2L["d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["d"]["ZIndex"] = 100;
+G2L["d"]["Size"] = UDim2.new(1, -430, 1, -560);
+G2L["d"]["BackgroundTransparency"] = 1;
+G2L["d"]["Name"] = [[Selected]];
+G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["Text"] = [[]];
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Tabs.Selected.Frame
+G2L["e"] = Instance.new("Frame", G2L["d"]);
+G2L["e"]["ZIndex"] = 100;
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Tabs.Selected.Frame.Frame
+G2L["f"] = Instance.new("Frame", G2L["e"]);
+G2L["f"]["ZIndex"] = 100;
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(57, 57, 57);
+G2L["f"]["Size"] = UDim2.new(1, -4, 1, -2);
+G2L["f"]["Position"] = UDim2.new(0, 2, 0, 2);
+G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Tabs.Selected.Frame.Frame.Frame
+G2L["10"] = Instance.new("Frame", G2L["f"]);
+G2L["10"]["ZIndex"] = 100;
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
+G2L["10"]["Size"] = UDim2.new(1, -2, 1, 0);
+G2L["10"]["Position"] = UDim2.new(0, 1, 0, 1);
+G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Tabs.Selected.Frame.Frame.Frame.TextLabel
+G2L["11"] = Instance.new("TextLabel", G2L["10"]);
+G2L["11"]["ZIndex"] = 100;
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["TextSize"] = 16;
+G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["11"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["BackgroundTransparency"] = 1;
+G2L["11"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["Text"] = [[Main]];
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Tabs.Selected.Frame.Frame.Frame.Hide
+G2L["12"] = Instance.new("Frame", G2L["10"]);
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
+G2L["12"]["Size"] = UDim2.new(1, 0, 1, -24);
+G2L["12"]["Position"] = UDim2.new(0, 0, 0, 24);
+G2L["12"]["BorderColor3"] = Color3.fromRGB(57, 57, 57);
+G2L["12"]["Name"] = [[Hide]];
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Tabs.Unselected
+G2L["13"] = Instance.new("TextButton", G2L["b"]);
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["TextSize"] = 14;
+G2L["13"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["13"]["ZIndex"] = 100;
+G2L["13"]["Size"] = UDim2.new(1, -430, 1, -560);
+G2L["13"]["BackgroundTransparency"] = 1;
+G2L["13"]["Name"] = [[Unselected]];
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["Text"] = [[]];
+G2L["13"]["Position"] = UDim2.new(0, 100, 0, 0);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Tabs.Unselected.Frame
+G2L["14"] = Instance.new("Frame", G2L["13"]);
+G2L["14"]["ZIndex"] = 100;
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Tabs.Unselected.Frame.Frame
+G2L["15"] = Instance.new("Frame", G2L["14"]);
+G2L["15"]["ZIndex"] = 100;
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(57, 57, 57);
+G2L["15"]["Size"] = UDim2.new(1, -4, 1, -2);
+G2L["15"]["Position"] = UDim2.new(0, 2, 0, 2);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Tabs.Unselected.Frame.Frame.Frame
+G2L["16"] = Instance.new("Frame", G2L["15"]);
+G2L["16"]["ZIndex"] = 100;
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["16"]["Size"] = UDim2.new(1, -2, 1, 0);
+G2L["16"]["Position"] = UDim2.new(0, 1, 0, 1);
+G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Tabs.Unselected.Frame.Frame.Frame.TextLabel
+G2L["17"] = Instance.new("TextLabel", G2L["16"]);
+G2L["17"]["BorderSizePixel"] = 0;
+G2L["17"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["17"]["TextSize"] = 16;
+G2L["17"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["17"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["17"]["BackgroundTransparency"] = 1;
+G2L["17"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17"]["Text"] = [[Configs]];
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Tabs.Unselected.Frame.Frame.Frame.Hide
+G2L["18"] = Instance.new("Frame", G2L["16"]);
+G2L["18"]["ZIndex"] = 100;
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(57, 57, 57);
+G2L["18"]["Size"] = UDim2.new(1, 0, 1, -24);
+G2L["18"]["Position"] = UDim2.new(0, 0, 0, 24);
+G2L["18"]["BorderColor3"] = Color3.fromRGB(57, 57, 57);
+G2L["18"]["Name"] = [[Hide]];
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2
+G2L["19"] = Instance.new("Frame", G2L["9"]);
+G2L["19"]["BorderSizePixel"] = 0;
+G2L["19"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["Size"] = UDim2.new(1, -20, 1, -45);
+G2L["19"]["Position"] = UDim2.new(0, 10, 0, 35);
+G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["Name"] = [[Container2]];
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1
+G2L["1a"] = Instance.new("Frame", G2L["19"]);
+G2L["1a"]["ZIndex"] = 93;
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(57, 57, 57);
+G2L["1a"]["Size"] = UDim2.new(1, -4, 1, -4);
+G2L["1a"]["Position"] = UDim2.new(0, 2, 0, 2);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["Name"] = [[Container1]];
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container
+G2L["1b"] = Instance.new("Frame", G2L["1a"]);
+G2L["1b"]["ZIndex"] = 92;
+G2L["1b"]["BorderSizePixel"] = 0;
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
+G2L["1b"]["Size"] = UDim2.new(1, -2, 1, -2);
+G2L["1b"]["Position"] = UDim2.new(0, 1, 0, 1);
+G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["Name"] = [[Container]];
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll
+G2L["1c"] = Instance.new("ScrollingFrame", G2L["1b"]);
+G2L["1c"]["ScrollingDirection"] = Enum.ScrollingDirection.Y;
+G2L["1c"]["ZIndex"] = 91;
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
+G2L["1c"]["Name"] = [[Scroll]];
+G2L["1c"]["Selectable"] = false;
+G2L["1c"]["VerticalScrollBarPosition"] = Enum.VerticalScrollBarPosition.Left;
+G2L["1c"]["Size"] = UDim2.new(0.5, -10, 1, -16);
+G2L["1c"]["Position"] = UDim2.new(0, 5, 0, 8);
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["ScrollBarThickness"] = 0;
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2
+G2L["1d"] = Instance.new("Frame", G2L["1c"]);
+G2L["1d"]["ZIndex"] = 90;
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(57, 57, 57);
+G2L["1d"]["Size"] = UDim2.new(1, 0, 1, -930);
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["Name"] = [[Contain2]];
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.UICorner
+G2L["1e"] = Instance.new("UICorner", G2L["1d"]);
+G2L["1e"]["CornerRadius"] = UDim.new(0, 3);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Contain
+G2L["1f"] = Instance.new("Frame", G2L["1d"]);
+G2L["1f"]["ZIndex"] = 89;
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["1f"]["Size"] = UDim2.new(1, -2, 1, -2);
+G2L["1f"]["Position"] = UDim2.new(0, 1, 0, 1);
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["Name"] = [[Contain]];
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Contain.UICorner
+G2L["20"] = Instance.new("UICorner", G2L["1f"]);
+G2L["20"]["CornerRadius"] = UDim.new(0, 3);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Contain.UIListLayout
+G2L["21"] = Instance.new("UIListLayout", G2L["1f"]);
+G2L["21"]["Padding"] = UDim.new(0, 4);
+G2L["21"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Contain.UIPadding
+G2L["22"] = Instance.new("UIPadding", G2L["1f"]);
+G2L["22"]["PaddingTop"] = UDim.new(0, 12);
+G2L["22"]["PaddingRight"] = UDim.new(0, 7);
+G2L["22"]["PaddingLeft"] = UDim.new(0, 6);
+G2L["22"]["PaddingBottom"] = UDim.new(0, 1);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Contain.Toggles
+G2L["23"] = Instance.new("TextLabel", G2L["1f"]);
+G2L["23"]["BorderSizePixel"] = 0;
+G2L["23"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["23"]["TextSize"] = 15;
+G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["23"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["23"]["BackgroundTransparency"] = 1;
+G2L["23"]["Size"] = UDim2.new(1, -10, 1, -155);
+G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["Text"] = [[Toggles]];
+G2L["23"]["Name"] = [[Toggles]];
+G2L["23"]["Position"] = UDim2.new(0, 6, 0, 6);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Contain.Toggle
+G2L["24"] = Instance.new("TextButton", G2L["1f"]);
+G2L["24"]["BorderSizePixel"] = 0;
+G2L["24"]["TextSize"] = 14;
+G2L["24"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["24"]["Size"] = UDim2.new(1, -40, 0, 20);
+G2L["24"]["BackgroundTransparency"] = 1;
+G2L["24"]["Name"] = [[Toggle]];
+G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["Text"] = [[]];
+G2L["24"]["Position"] = UDim2.new(0.06061, 0, 0.1976, 0);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Contain.Toggle.LocalScript
+G2L["25"] = Instance.new("LocalScript", G2L["24"]);
+
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Contain.Toggle.Select
+G2L["26"] = Instance.new("Frame", G2L["24"]);
+G2L["26"]["BorderSizePixel"] = 0;
+G2L["26"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["Size"] = UDim2.new(0, 15, 0, 15);
+G2L["26"]["Position"] = UDim2.new(0, 0, 0, 2);
+G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["Name"] = [[Select]];
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Contain.Toggle.Select.Frame
+G2L["27"] = Instance.new("Frame", G2L["26"]);
+G2L["27"]["BorderSizePixel"] = 0;
+G2L["27"]["BackgroundColor3"] = Color3.fromRGB(57, 57, 57);
+G2L["27"]["Size"] = UDim2.new(1, -2, 1, -2);
+G2L["27"]["Position"] = UDim2.new(0, 1, 0, 1);
+G2L["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Contain.Toggle.Select.Frame.Frame
+G2L["28"] = Instance.new("Frame", G2L["27"]);
+G2L["28"]["BorderSizePixel"] = 0;
+G2L["28"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
+G2L["28"]["Size"] = UDim2.new(1, -2, 1, -2);
+G2L["28"]["Position"] = UDim2.new(0, 1, 0, 1);
+G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Contain.Toggle.Select.Frame.Frame.UIGradient
+G2L["29"] = Instance.new("UIGradient", G2L["28"]);
+G2L["29"]["Rotation"] = 90;
+G2L["29"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(127, 127, 127))};
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Contain.Toggle.Select.TextLabel
+G2L["2a"] = Instance.new("TextLabel", G2L["26"]);
+G2L["2a"]["BorderSizePixel"] = 0;
+G2L["2a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2a"]["TextSize"] = 12;
+G2L["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2a"]["BackgroundTransparency"] = 1;
+G2L["2a"]["Size"] = UDim2.new(0, 100, 1, 0);
+G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2a"]["Text"] = [[ButtonUnselected]];
+G2L["2a"]["Position"] = UDim2.new(0, 22, 0, 0);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Contain.Toggle.TextButton
+G2L["2b"] = Instance.new("TextButton", G2L["24"]);
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["TextSize"] = 14;
+G2L["2b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2b"]["Size"] = UDim2.new(1, -150, 1, -5);
+G2L["2b"]["BackgroundTransparency"] = 1;
+G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2b"]["Text"] = [[]];
+G2L["2b"]["Position"] = UDim2.new(0, 193, 0, 4);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Contain.Toggle.TextButton.Keybind
+G2L["2c"] = Instance.new("Frame", G2L["2b"]);
+G2L["2c"]["BorderSizePixel"] = 0;
+G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2c"]["Size"] = UDim2.new(0, 40, 0, 15);
+G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2c"]["Name"] = [[Keybind]];
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Contain.Toggle.TextButton.Keybind.Frame
+G2L["2d"] = Instance.new("Frame", G2L["2c"]);
+G2L["2d"]["BorderSizePixel"] = 0;
+G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(57, 57, 57);
+G2L["2d"]["Size"] = UDim2.new(1, -2, 1, -2);
+G2L["2d"]["Position"] = UDim2.new(0, 1, 0, 1);
+G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Contain.Toggle.TextButton.Keybind.Frame.Frame
+G2L["2e"] = Instance.new("Frame", G2L["2d"]);
+G2L["2e"]["BorderSizePixel"] = 0;
+G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
+G2L["2e"]["Size"] = UDim2.new(1, -2, 1, -2);
+G2L["2e"]["Position"] = UDim2.new(0, 1, 0, 1);
+G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Contain.Toggle.TextButton.Keybind.Frame.Frame.UIGradient
+G2L["2f"] = Instance.new("UIGradient", G2L["2e"]);
+G2L["2f"]["Rotation"] = 90;
+G2L["2f"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(127, 127, 127))};
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Contain.Toggle.TextButton.Keybind.TextLabel
+G2L["30"] = Instance.new("TextLabel", G2L["2c"]);
+G2L["30"]["BorderSizePixel"] = 0;
+G2L["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["30"]["TextSize"] = 12;
+G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["30"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["30"]["BackgroundTransparency"] = 1;
+G2L["30"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["30"]["Text"] = [[E]];
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Deco
+G2L["31"] = Instance.new("Frame", G2L["1d"]);
+G2L["31"]["ZIndex"] = 89;
+G2L["31"]["BorderSizePixel"] = 0;
+G2L["31"]["BackgroundColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["31"]["Size"] = UDim2.new(1, -6, 0.015, 0);
+G2L["31"]["Position"] = UDim2.new(0, 3, 0, 2);
+G2L["31"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["31"]["Name"] = [[Deco]];
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Deco.UICorner
+G2L["32"] = Instance.new("UICorner", G2L["31"]);
+G2L["32"]["CornerRadius"] = UDim.new(0, 15);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Deco.UIGradient
+G2L["33"] = Instance.new("UIGradient", G2L["31"]);
+G2L["33"]["Rotation"] = 90;
+G2L["33"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(127, 127, 127))};
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.UIListLayout
+G2L["34"] = Instance.new("UIListLayout", G2L["1c"]);
+G2L["34"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.UICorner
+G2L["35"] = Instance.new("UICorner", G2L["6"]);
+G2L["35"]["CornerRadius"] = UDim.new(0, 3);
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.UICorner
+G2L["36"] = Instance.new("UICorner", G2L["5"]);
+G2L["36"]["CornerRadius"] = UDim.new(0, 3);
+
+-- StarterGui.Library.Screen.Drag.Main4.Name
+G2L["37"] = Instance.new("TextLabel", G2L["4"]);
+G2L["37"]["ZIndex"] = 98;
+G2L["37"]["BorderSizePixel"] = 0;
+G2L["37"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["37"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["37"]["TextSize"] = 19;
+G2L["37"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["37"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["37"]["BackgroundTransparency"] = 1;
+G2L["37"]["Size"] = UDim2.new(1, -30, 1, -615);
+G2L["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["37"]["Text"] = [[UI Library]];
+G2L["37"]["Name"] = [[Name]];
+G2L["37"]["Position"] = UDim2.new(0, 15, 0, 0);
+
+-- StarterGui.Library.Screen.Drag.Main4.UICorner
+G2L["38"] = Instance.new("UICorner", G2L["4"]);
+G2L["38"]["CornerRadius"] = UDim.new(0, 3);
+
+-- StarterGui.Library.LocalScript
+G2L["39"] = Instance.new("LocalScript", G2L["1"]);
+
+
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Tabs.LocalScript
+local function C_c()
+local script = G2L["c"];
+	local AlreadyBeenClicked1 = true
+	local AlreadyBeenClicked2 = false
+	local TweeenService = game:GetService("TweenService")
+	local Button = script.Parent.Selected
+	local Button2 = script.Parent.Unselected
+	local visible = Button.Frame.Frame.Frame.Hide
+	local visible2 = Button2.Frame.Frame.Frame.Hide
+	local Selected = {BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)}
+	local Unselected = {BackgroundColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)}
+	local color = {BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)}
+	local color1 = {BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)}
+	local Tween = TweeenService:Create(Button.Frame.Frame.Frame, TweenInfo.new(0.1, Enum.EasingStyle.Quart, Enum.EasingDirection.In), Selected)
+	local Tween2 = TweeenService:Create(Button.Frame.Frame.Frame, TweenInfo.new(0.1, Enum.EasingStyle.Quart, Enum.EasingDirection.In), Unselected)
+	local Tween3 = TweeenService:Create(Button2.Frame.Frame.Frame, TweenInfo.new(0.1, Enum.EasingStyle.Quart, Enum.EasingDirection.In), Selected)
+	local Tween4 = TweeenService:Create(Button2.Frame.Frame.Frame, TweenInfo.new(0.1, Enum.EasingStyle.Quart, Enum.EasingDirection.In), Unselected)
+	
+	local Tween5 = TweeenService:Create(visible, TweenInfo.new(0.1, Enum.EasingStyle.Quart, Enum.EasingDirection.In), color)
+	local Tween6 = TweeenService:Create(visible, TweenInfo.new(0.1, Enum.EasingStyle.Quart, Enum.EasingDirection.In), color1)
+	local Tween7 = TweeenService:Create(visible2, TweenInfo.new(0.1, Enum.EasingStyle.Quart, Enum.EasingDirection.In), color)
+	local Tween8 = TweeenService:Create(visible2, TweenInfo.new(0.1, Enum.EasingStyle.Quart, Enum.EasingDirection.In), color1)
+	Button.MouseButton1Click:Connect(function()
+		if AlreadyBeenClicked1 == false then
+			Tween:Play()
+			Tween5:Play()
+			Tween4:Play()
+			Tween8:Play()
+			AlreadyBeenClicked1 = true
+			AlreadyBeenClicked2 = false
+		end
+	end)
+	Button2.MouseButton1Click:Connect(function()
+		if AlreadyBeenClicked2 == false then
+			Tween3:Play()
+			Tween7:Play()
+			Tween2:Play()
+			Tween6:Play()
+			AlreadyBeenClicked2 = true
+			AlreadyBeenClicked1 = false
+		end
+	end)
+end;
+task.spawn(C_c);
+-- StarterGui.Library.Screen.Drag.Main4.Main3.Main2.Main.Tabs And Containers.Container2.Container1.Container.Scroll.Contain2.Contain.Toggle.LocalScript
+local function C_25()
+local script = G2L["25"];
+	local AlreadyBeenClicked = false
+	local TweeenService = game:GetService("TweenService")
+	local Button = script.Parent	
+	local Goal = {BackgroundColor3 = Color3.new(0, 0.666667, 1)}
+	local Goal2 = {BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)}
+	local Tween = TweeenService:Create(Button.Select.Frame.Frame, TweenInfo.new(0.1, Enum.EasingStyle.Quart, Enum.EasingDirection.In), Goal)
+	local Tween2 = TweeenService:Create(Button.Select.Frame.Frame, TweenInfo.new(0.1, Enum.EasingStyle.Quart, Enum.EasingDirection.In), Goal2)
+	Button.MouseButton1Click:Connect(function()
+		if AlreadyBeenClicked == false then
+			Tween:Play()
+			AlreadyBeenClicked = true
+		else
+			Tween2:Play()
+			AlreadyBeenClicked = false
+		end
+	end)
+end;
+task.spawn(C_25);
+-- StarterGui.Library.LocalScript
+local function C_39()
+local script = G2L["39"];
+	local UserInputService = game:GetService("UserInputService")
+	local frame = script.Parent.Screen.Drag
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	local function update(input)
+		local delta = input.Position - dragStart
+		frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	frame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	frame.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end;
+task.spawn(C_39);
+
+return G2L["1"], require;
